@@ -1,0 +1,31 @@
+
+
+
+.movies_grid {
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr;
+       grid-gap: 1rem;
+}
+
+
+.movies_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.movies_chip{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    margin: 0.5rem;
+    cursor: pointer;
+    border-radius: 12px;
+    width: 7rem;
+    background: red;
+}
+

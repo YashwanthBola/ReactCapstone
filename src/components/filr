@@ -1,0 +1,9 @@
+/* image 13 */
+
+position: absolute;
+width: 845px;
+height: 1118px;
+left: 0px;
+top: 0px;
+
+background: url(image.png);

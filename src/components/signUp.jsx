@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {useNavigate} from "react-router-dom"
 
 function SignUp(){
     const [formData, setFormData]=useState({
@@ -17,6 +18,7 @@ function SignUp(){
         userName:false,
         checkBox:false,
     });
+    const navigate=useNavigate();
     const handleSubmit = (e)=>{
          e.preventDefault()
          const{name, email, mobile, userName, checkBox}= formData;
@@ -42,6 +44,8 @@ function SignUp(){
          if(checkBox===false){
             setError((prevState)=>{return{...prevState, checkBox:true}})
          }
+         localStorage.setItem("user", JSON.stringify(formData));
+         navigate("/movies");
     }
     return(
         <div>

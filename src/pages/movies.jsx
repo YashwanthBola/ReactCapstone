@@ -2,6 +2,7 @@ import Styles from"../components/movies.module.css";
 import MovieGrid from "../components/MovieGrid";
 import { useState } from "react";
 import MovieChip from "../components/movieChip";
+import { useNavigate } from "react-router-dom";
 const MoviesList=[{
     value:"action",
     label:"Action",
@@ -41,6 +42,16 @@ const MoviesList=[{
 }]
 function Movies(){
     const [selected, setSelected]=useState([]);
+    const navigate=useNavigate();
+    const handleNext=()=>{
+        if(selected.length < 3){
+            alert("Minimum 3 category should be required")
+        }
+        else{
+               localStorage.setItem("selected", JSON.stringify(selected));
+               navigate("/widgets");
+        }
+    }
     return(
         <div style={{
             display:"flex",
@@ -83,6 +94,11 @@ function Movies(){
                 <MovieGrid key={movie.value} selected={selected} setSelected={setSelected} movie={movie}/>
              ))}</div>
             </div>
+            
+            <div>
+                 <button onClick={handleNext} className="next">Next Page</button>
+            </div>
+        
         </div>
         
     );

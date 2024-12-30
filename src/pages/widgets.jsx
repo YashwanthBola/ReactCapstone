@@ -2,6 +2,7 @@ import UserInfo from "../components/userInfo";
 import Note from "../components/note";
 import News from "../components/news";
 import Weather from "../components/weather";
+import Timer from "../components/timer";
 export default function Widgets(){
     return(
         <div>
@@ -10,6 +11,7 @@ export default function Widgets(){
             <Note/>
             <News/>
             <Weather/>
+            <Timer />
         </div>
     );
 }

@@ -19,11 +19,11 @@ export default function Weather(){
             <p>This is todays Weather</p>
             {loading ? <p>Loading...</p> : <div style={{
                 width:"500px",
-                height:"300px",
+                height:"100px",
             }}>
-                {weather.values.temperature}*C 
+                <p>Temperature :</p>{weather.values.temperature}*C 
                 <br />
-                {weather.values.windSpeed}m/s
+                <p>Wind Speed :</p>{weather.values.windSpeed}m/s
                 </div>}
         </div>
     );
